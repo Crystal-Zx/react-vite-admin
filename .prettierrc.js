@@ -1,5 +1,5 @@
 export default {
-  printWidth: 100, // 单行代码最大宽度（单位：字符），默认值 80
+  printWidth: 80, // 单行代码最大宽度（单位：字符），默认值 80
   tabWidth: 2, // tab 宽度（单位：字符），默认值 2
   useTabs: false, // 不使用 tab 制表符代替空格，默认值 false
   trailingComma: 'none', // 不使用尾随逗号，默认值 'none'，可选值有 'none' | 'es5' | 'all'
