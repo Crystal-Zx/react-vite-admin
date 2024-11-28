@@ -28,6 +28,10 @@ function App() {
       <p className='read-the-docs'>
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <p>环境变量测试：</p>
+        <p>{import.meta.env.VITE_API_BASE_URL}</p>
+      </div>
     </>
   )
 }
