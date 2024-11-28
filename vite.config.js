@@ -11,5 +11,8 @@ const envResolver = {
 
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
+  // 此处需要访问环境变量的话，请放开下面一行的注释，并从 vite 导入 loadEnv API
+  // const env = loadEnv(mode, process.cwd(), '')
+
   return envResolver[command]()
 })
