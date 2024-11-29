@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import viteLogo from '/vite.svg'
+import reactLogo from '@/assets/react.svg'
+import strings from '@/constants/strings.js'
+
 import './App.css'
 
 function App() {
@@ -28,9 +31,9 @@ function App() {
       <p className='read-the-docs'>
         Click on the Vite and React logos to learn more
       </p>
-      <div>
-        <p>环境变量测试：</p>
-        <p>{import.meta.env.VITE_API_BASE_URL}</p>
+      <div style={{ border: '1px dashed red' }}>
+        <p>环境变量测试：{import.meta.env.VITE_API_BASE_URL}</p>
+        <p>路径别名测试：{strings.storageKeyTest}</p>
       </div>
     </>
   )

@@ -11,25 +11,30 @@
 - package.json scripts 中配置命令行提交
 
 2. ESLint 及 Prettier 配置：规范代码风格 ✅
-3. 环境变量处理
-4. 构建工具基础配置：
+3. 环境变量处理 ✅
+4. 构建工具基础配置： ✅
 
 - 区分开发/生产环境配置
 - 路径别名
 - Babel、postcss 等处理代码兼容问题
+  - Babel 内置在了 @vitejs/plugin-react 包中了
 
 5. vscode 配置 ✅
 
 - setting.json
 - extension.json
 
-6. React Router 路由配置
-7. antd 接入及后台基础界面框架处理
-8. axios 等请求库接入
+6. import-sort 模块导入顺序 ✅
+
+- eslint-plugin-simple-import-sort
+
+7. React Router 路由配置
+8. antd 接入及后台基础界面框架处理
+9. axios 等请求库接入
 
 ### TypeScript 接入
 
-### tailwind 接入
+### css 选择：tailwind | less | scss 接入
 
 ### Zustand 接入
 

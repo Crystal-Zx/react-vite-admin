@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit" // 保存文件时手动修复代码错误
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "vite.config.*": "vitest.config.*, vite.*.config.js, .env.*",
+    "package.json": "package-lock.json, jsconfig*,.eslint*, eslint*, prettier.config.*, commitlint.config.*"
+  }
+}
