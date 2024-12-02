@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import RootLayout from '@/layouts/RootLayout'
 import NotFound from '@/pages/NotFound'
+import PageOneEdit from '@/pages/page1/PageOneEdit'
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,28 @@ export const router = createBrowserRouter([
             title: 'Welcome to Page One'
           },
           crumb: () => 'Page One'
+        }
+        // children: [
+        //   {
+        //     path: 'edit',
+        //     element: <PageOneEdit />,
+        //     handle: {
+        //       meta: {
+        //         title: 'Welcome to Page One Edit'
+        //       },
+        //       crumb: () => 'Edit'
+        //     }
+        //   }
+        // ]
+      },
+      {
+        path: 'page1/edit',
+        element: <PageOneEdit />,
+        handle: {
+          meta: {
+            title: 'Welcome to Page One Edit'
+          },
+          crumb: () => 'Edit'
         }
       },
       {
