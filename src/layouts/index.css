@@ -1,0 +1,21 @@
+.container {
+  margin: 0;
+  display: flex;
+}
+.sidebar {
+  margin: 0;
+  width: 200px;
+  height: 100vh;
+  padding-top: 20px;
+  padding-left: 24px;
+  overflow-y: auto;
+  background-color: #efefef;
+}
+.sidebar-li {
+  list-style: none;
+  height: 30px;
+}
+.main {
+  flex: 1;
+  margin: 20px 24px;
+}
