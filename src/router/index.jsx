@@ -3,7 +3,6 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import RootLayout from '@/layouts/RootLayout'
 import NotFound from '@/pages/NotFound'
-import PageOneEdit from '@/pages/page1/PageOneEdit'
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +21,11 @@ export const router = createBrowserRouter([
             title: 'Welcome to Page One'
           },
           crumb: () => 'Page One'
+          // menu: {
+          //   icon: <HomeOutlined />,
+          //   label: 'Page 1',
+          //   title: 'Page 1'
+          // }
         }
         // children: [
         //   {
@@ -38,7 +42,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'page1/edit',
-        element: <PageOneEdit />,
+        Component: lazy(() => import('@/pages/page1/PageOneEdit')),
         handle: {
           meta: {
             title: 'Welcome to Page One Edit'
@@ -54,6 +58,10 @@ export const router = createBrowserRouter([
             title: 'Welcome to Page Two'
           },
           crumb: () => 'Page Two'
+          // menu: {
+          //   icon: <PieChartOutlined />,
+          //   title: 'Page 2'
+          // }
         }
       },
       {
@@ -64,6 +72,10 @@ export const router = createBrowserRouter([
             title: 'Welcome to Page Three'
           },
           crumb: () => 'Page Three'
+          // menu: {
+          //   icon: <SettingOutlined />,
+          //   title: 'Page 3'
+          // }
         }
       }
     ]
