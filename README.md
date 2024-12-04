@@ -28,8 +28,8 @@
 
 - eslint-plugin-simple-import-sort
 
-7. React Router 路由配置
-8. antd 接入及后台基础界面框架处理
+7. React Router 路由配置 ✅
+8. antd 接入及后台基础界面框架处理（Half）
 9. axios 等请求库接入
 
 ### TypeScript 接入
@@ -43,7 +43,7 @@
 1. base： 仅提供基础基建（上述 1 - 6 点）；
 2. admin： 在 base 的基础上提供：
 
-- 路由，权限处理
+- 路由，权限处理 ✅
 - 界面基础布局
 - 基础 Axios 使用封装
   等后台相关功能；
