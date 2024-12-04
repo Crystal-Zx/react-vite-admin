@@ -3,7 +3,6 @@ import { Link, Outlet } from 'react-router-dom'
 import strings from '@/constants/strings'
 
 export default function PageOne() {
-  // console.log('page one render')
   return (
     <div>
       <h3>Page One</h3>

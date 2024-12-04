@@ -1,15 +1,16 @@
 .container {
   margin: 0;
+  padding: 0;
+  height: 100vh;
   display: flex;
 }
 .sidebar {
   margin: 0;
   width: 200px;
-  height: 100vh;
-  padding-top: 20px;
-  padding-left: 24px;
-  overflow-y: auto;
-  background-color: #efefef;
+  /* height: 100vh; */
+  /* padding-top: 20px;
+  padding-left: 24px; */
+  /* overflow-y: auto; */
 }
 .sidebar-li {
   list-style: none;

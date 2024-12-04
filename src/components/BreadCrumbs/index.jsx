@@ -2,7 +2,7 @@ import { Link, useMatches } from 'react-router-dom'
 
 export default function BreadCrumbs() {
   const matches = useMatches()
-  console.log('🚀 ~ BreadCrumbs ~ matches:', matches)
+  // console.log('🚀 ~ BreadCrumbs ~ matches:', matches)
   const crumbMatches = matches.filter(match => !!match.handle?.crumb)
 
   return (

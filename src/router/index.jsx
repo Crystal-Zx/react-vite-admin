@@ -9,23 +9,15 @@ export const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     errorElement: <h2>Something went wrong</h2>,
-    handle: {
-      crumb: () => 'Home'
-    },
     children: [
       {
         path: 'page1',
         Component: lazy(() => import('@/pages/page1')),
         handle: {
           meta: {
-            title: 'Welcome to Page One'
+            title: 'Welcome to Page1'
           },
-          crumb: () => 'Page One'
-          // menu: {
-          //   icon: <HomeOutlined />,
-          //   label: 'Page 1',
-          //   title: 'Page 1'
-          // }
+          crumb: () => 'Page1'
         }
         // children: [
         //   {
@@ -42,12 +34,12 @@ export const router = createBrowserRouter([
       },
       {
         path: 'page1/edit',
-        Component: lazy(() => import('@/pages/page1/PageOneEdit')),
+        Component: lazy(() => import('@/pages/page1/PageEdit')),
         handle: {
           meta: {
-            title: 'Welcome to Page One Edit'
+            title: 'Welcome to Page3 Edit'
           },
-          crumb: () => 'Edit'
+          crumb: () => 'Page3'
         }
       },
       {
@@ -55,13 +47,9 @@ export const router = createBrowserRouter([
         Component: lazy(() => import('@/pages/page2')),
         handle: {
           meta: {
-            title: 'Welcome to Page Two'
+            title: 'Welcome to Page2'
           },
-          crumb: () => 'Page Two'
-          // menu: {
-          //   icon: <PieChartOutlined />,
-          //   title: 'Page 2'
-          // }
+          crumb: () => 'Page2'
         }
       },
       {
@@ -69,13 +57,9 @@ export const router = createBrowserRouter([
         Component: lazy(() => import('@/pages/page3')),
         handle: {
           meta: {
-            title: 'Welcome to Page Three'
+            title: 'Welcome to Page3'
           },
-          crumb: () => 'Page Three'
-          // menu: {
-          //   icon: <SettingOutlined />,
-          //   title: 'Page 3'
-          // }
+          crumb: () => 'Page3'
         }
       }
     ]
