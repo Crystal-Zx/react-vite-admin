@@ -6,7 +6,8 @@
   },
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "vite.config.*": "vitest.config.*, vite.*.config.js, .env.*",
+    "vite.config.*": "vitest.config.*, vite.*.config.ts, .env.*",
+    "tsconfig.json": "tsconfig.*.json",
     "package.json": "package-lock.json, jsconfig*,.eslint*, eslint*, prettier.config.*, commitlint.config.*"
   }
 }
