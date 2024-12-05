@@ -1,21 +1,23 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import { Menu } from 'antd'
+import { Menu, MenuProps } from 'antd'
 
 import { useAuthMenuItems } from '@/stores/auth'
 
 export default function SidebarMenu() {
   const menuItems = useAuthMenuItems()
-  const navigate = useNavigate()
+  console.log('🚀 ~ SidebarMenu ~ menuItems:', menuItems)
+
   const { pathname } = useLocation()
   const defaultSelectedKeys = pathname.split('/').filter(v => v !== '')
   console.log('🚀 ~ SidebarMenu ~ pathname:', pathname, defaultSelectedKeys)
 
-  const handleMenuClick = ({ item, key, keyPath, domEvent }) => {
-    const href = keyPath.reverse().join('/')
-    navigate(href)
+  const handleMenuClick: MenuProps['onClick'] = ({ key, keyPath }) => {
+    // let href = keyPath.reverse().join('/')
+    // href = href.replace(/\/+/g, '/')
+    // navigate(href)
 
-    console.log('🚀 ~ handleMenuClick:', key, keyPath, href)
+    console.log('🚀 ~ handleMenuClick:', key, keyPath)
   }
   return (
     <Menu

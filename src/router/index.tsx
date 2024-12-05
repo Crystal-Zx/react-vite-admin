@@ -4,6 +4,12 @@ import { createBrowserRouter } from 'react-router-dom'
 import RootLayout from '@/layouts/RootLayout'
 import NotFound from '@/pages/NotFound'
 
+export type RouteHandle = {
+  meta?: {
+    title: string
+  }
+  crumb: () => React.ReactNode
+}
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -19,18 +25,6 @@ export const router = createBrowserRouter([
           },
           crumb: () => 'Page1'
         }
-        // children: [
-        //   {
-        //     path: 'edit',
-        //     element: <PageOneEdit />,
-        //     handle: {
-        //       meta: {
-        //         title: 'Welcome to Page One Edit'
-        //       },
-        //       crumb: () => 'Edit'
-        //     }
-        //   }
-        // ]
       },
       {
         path: 'page1/edit',
@@ -39,7 +33,7 @@ export const router = createBrowserRouter([
           meta: {
             title: 'Welcome to Page3 Edit'
           },
-          crumb: () => 'Page3'
+          crumb: () => 'Edit'
         }
       },
       {
@@ -50,7 +44,19 @@ export const router = createBrowserRouter([
             title: 'Welcome to Page2'
           },
           crumb: () => 'Page2'
-        }
+        },
+        children: [
+          {
+            path: 'detail',
+            Component: lazy(() => import('@/pages/page2/PageDetail')),
+            handle: {
+              meta: {
+                title: 'Page Detail'
+              },
+              crumb: () => 'Detail'
+            }
+          }
+        ]
       },
       {
         path: 'page3',
@@ -60,6 +66,16 @@ export const router = createBrowserRouter([
             title: 'Welcome to Page3'
           },
           crumb: () => 'Page3'
+        }
+      },
+      {
+        path: 'page4',
+        Component: lazy(() => import('@/pages/page4')),
+        handle: {
+          meta: {
+            title: 'Welcome to Page4'
+          },
+          crumb: () => 'Page4'
         }
       }
     ]

@@ -1,16 +1,21 @@
 import { Link, useMatches } from 'react-router-dom'
 
+import { RouteHandle } from '@/router'
+
 export default function BreadCrumbs() {
   const matches = useMatches()
-  // console.log('🚀 ~ BreadCrumbs ~ matches:', matches)
-  const crumbMatches = matches.filter(match => !!match.handle?.crumb)
+  console.log('🚀 ~ BreadCrumbs ~ matches:', matches)
+
+  const crumbMatches = matches.filter(
+    match => !!(match.handle as RouteHandle)?.crumb
+  )
 
   return (
     <div>
       <span>
         面包屑导航：
         {crumbMatches.map((match, idx) => {
-          const title = match.handle.crumb()
+          const title = (match.handle as RouteHandle).crumb()
           return (
             <span key={idx.toString()}>
               {!!idx && <span> / </span>}
